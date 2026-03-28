@@ -733,6 +733,8 @@ public class C extends B {
 
 > Java does **not support multiple inheritance** with classes due to the **Diamond Problem** — ambiguity about which parent's method to use when two parents share the same method name.
 
+ Diamond Problem:Suppose we inherit a method from A->B->D  and Same method is inherited from A->C->D, then confusion from which parent class method is inherited to child class D. This is called as DIAMOND PROBLEM. Hence in java classes does not support multiple inheritance
+
 ```java
 public class C extends A, B { } // Error
 ```
@@ -1549,6 +1551,18 @@ int x = 10, y = 20, temp;
 temp = y;
 y    = x;
 x    = temp;
+System.out.println(x); // 20
+System.out.println(y); // 10
+```
+
+---
+### Swapping Two Variables without using Third Variables
+
+```java
+int x = 10, y = 20;
+x    = x + y; //x=10+20=30
+y    = x - y; //y=30-20=10
+x    = x - y; //x=30-10=20
 System.out.println(x); // 20
 System.out.println(y); // 10
 ```
