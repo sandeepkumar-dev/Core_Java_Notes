@@ -2,7 +2,7 @@
 
 > **Topic:** Core Java Fundamentals  
 > **Level:** Beginner to Intermediate  
-> **IDE Used:** Eclipse  
+> **IDE Used:** Eclipse
 
 ---
 
@@ -55,16 +55,16 @@ class A {
 
 ### Class Naming Conventions
 
-| Rule | Example | Valid? |
-|------|---------|--------|
-| Start with uppercase | `class Bank` | Yes |
-| CamelCase for multi-word names | `class BankAccountNumber` | Yes |
-| Space in name | `class Bank Account Number` | No |
-| Starts with a number | `class 1Bank` | No |
-| Starts with letter, followed by number | `class Bank1` | Yes |
-| Snake_case | `class Bank_Account_Number` | Works, not recommended |
-| Special character `$` | `class $A` | Works, not recommended |
-| Other special chars (`#`, `@`, `%`, etc.) | `class #Bank` | No |
+| Rule                                      | Example                     | Valid?                 |
+| ----------------------------------------- | --------------------------- | ---------------------- |
+| Start with uppercase                      | `class Bank`                | Yes                    |
+| CamelCase for multi-word names            | `class BankAccountNumber`   | Yes                    |
+| Space in name                             | `class Bank Account Number` | No                     |
+| Starts with a number                      | `class 1Bank`               | No                     |
+| Starts with letter, followed by number    | `class Bank1`               | Yes                    |
+| Snake_case                                | `class Bank_Account_Number` | Works, not recommended |
+| Special character `$`                     | `class $A`                  | Works, not recommended |
+| Other special chars (`#`, `@`, `%`, etc.) | `class #Bank`               | No                     |
 
 > **Best Practice:** Always use **PascalCase** (UpperCamelCase) for class names.
 
@@ -79,6 +79,7 @@ ClassName variableName = new ClassName();
 ```
 
 The `new` keyword:
+
 - Sends a request to the class to **create an object in heap memory**
 - Returns the object's memory address and stores it in a **reference variable**
 
@@ -200,13 +201,13 @@ System.out.println(a2); // p1.A@4517d9a3
 
 ### Default Values by Data Type
 
-| Data Type | Default Value |
-|-----------|--------------|
-| `byte`, `short`, `int`, `long` | `0` |
-| `float`, `double` | `0.0` |
-| `boolean` | `false` |
-| `char` | `' '` (blank space) |
-| `String` / Any Object | `null` |
+| Data Type                      | Default Value       |
+| ------------------------------ | ------------------- |
+| `byte`, `short`, `int`, `long` | `0`                 |
+| `float`, `double`              | `0.0`               |
+| `boolean`                      | `false`             |
+| `char`                         | `' '` (blank space) |
+| `String` / Any Object          | `null`              |
 
 ---
 
@@ -243,10 +244,10 @@ public int test() {
 
 ### 4.3 The `return` Keyword
 
-| Form | Method Type | Purpose |
-|------|-------------|---------|
-| `return;` | `void` | Exits method early (optional) |
-| `return value;` | non-void | Returns value and exits (mandatory) |
+| Form            | Method Type | Purpose                             |
+| --------------- | ----------- | ----------------------------------- |
+| `return;`       | `void`      | Exits method early (optional)       |
+| `return value;` | non-void    | Returns value and exits (mandatory) |
 
 > Any code written **after** a `return` statement will never execute — this is an **Unreachable Code Error**:
 
@@ -329,22 +330,29 @@ public class A {
 
 ### Primitive Data Types
 
-| Category | Type | Size | Default | Range |
-|----------|------|------|---------|-------|
-| Integer | `byte` | 1 byte | `0` | -128 to 127 |
-| Integer | `short` | 2 bytes | `0` | -32,768 to 32,767 |
-| Integer | `int` | 4 bytes | `0` | -2,147,483,648 to 2,147,483,647 |
-| Integer | `long` | 8 bytes | `0` | -9.2 quintillion to 9.2 quintillion |
-| Floating | `float` | 4 bytes | `0.0` | ~±3.4E+38 (32-bit IEEE 754) |
-| Floating | `double` | 8 bytes | `0.0` | ~±1.8E+308 (64-bit IEEE 754) |
-| Boolean | `boolean` | N/A | `false` | `true` or `false` |
-| Character | `char` | 2 bytes | `' '` | 0 to 65,535 (Unicode) |
+| Category  | Type      | Size    | Default | Range                               |
+| --------- | --------- | ------- | ------- | ----------------------------------- |
+| Integer   | `byte`    | 1 byte  | `0`     | -128 to 127                         |
+| Integer   | `short`   | 2 bytes | `0`     | -32,768 to 32,767                   |
+| Integer   | `int`     | 4 bytes | `0`     | -2,147,483,648 to 2,147,483,647     |
+| Integer   | `long`    | 8 bytes | `0`     | -9.2 quintillion to 9.2 quintillion |
+| Floating  | `float`   | 4 bytes | `0.0`   | ~±3.4E+38 (32-bit IEEE 754)         |
+| Floating  | `double`  | 8 bytes | `0.0`   | ~±1.8E+308 (64-bit IEEE 754)        |
+| Boolean   | `boolean` | N/A     | `false` | `true` or `false`                   |
+| Character | `char`    | 2 bytes | `' '`   | 0 to 65,535 (Unicode)               |
 
 ### Non-Primitive
 
-| Type | Size | Default |
-|------|------|---------|
-| `String` | Dynamic | `null` |
+| Type              | Size      | Default | Description                                          |
+| ----------------- | --------- | ------- | ---------------------------------------------------- |
+| `String`          | Dynamic   | `null`  | tores sequence of characters (text)                  |
+| `Array`           | Fixed     | `null`  | Collection of elements of same type                  |
+| `Class`           | Dynamic   | `null`  | Blueprint to create objects                          |
+| `Object`          | Dynamic   | `null`  | Parent of all classes in Java                        |
+| `Interface`       | Dynamic   | `null`  | Used to achieve abstraction                          |
+| `Enum`            | Fixed Set | `null`  | Collection of predefined constants                   |
+| `Wrapper Classes` | Depends   | `null`  | Converts primitive to object (Integer, Double, etc.) |
+| `Collection`      | Dynamic   | `null`  | Group of objects (List, Set, Map, etc.)              |
 
 ### Important Literal Syntax
 
@@ -371,13 +379,13 @@ var x6 = 'a';        // inferred as char
 
 ### Restrictions of `var`
 
-| Usage | Allowed? |
-|-------|----------|
-| Local variable | Yes |
-| Static variable | No |
-| Instance variable | No |
-| Method argument | No |
-| Method return type | No |
+| Usage              | Allowed? |
+| ------------------ | -------- |
+| Local variable     | Yes      |
+| Static variable    | No       |
+| Instance variable  | No       |
+| Method argument    | No       |
+| Method return type | No       |
 
 ```java
 public class C {
@@ -399,18 +407,18 @@ public class C {
 
 ### Stack vs Heap
 
-| Feature | Stack | Heap |
-|---------|-------|------|
-| Stores | Local variables, method call frames | Objects |
-| Order | LIFO (Last In, First Out) | No specific order |
-| Managed by | JVM automatically | Garbage Collector |
+| Feature    | Stack                               | Heap              |
+| ---------- | ----------------------------------- | ----------------- |
+| Stores     | Local variables, method call frames | Objects           |
+| Order      | LIFO (Last In, First Out)           | No specific order |
+| Managed by | JVM automatically                   | Garbage Collector |
 
 ### Garbage Collector
 
 - Automatically **removes objects from heap memory** that are no longer referenced
 - Prevents `OutOfMemoryError`
 - Runs in the background — you cannot control exactly when it runs
-- You can *suggest* GC to run using `System.gc()`, but it's not guaranteed
+- You can _suggest_ GC to run using `System.gc()`, but it's not guaranteed
 
 ---
 
@@ -419,6 +427,7 @@ public class C {
 A constructor is a special block that runs **automatically when an object is created**. It is used to initialize the object.
 
 **Rules:**
+
 - Must have the **same name as the class**
 - Is **always void by default** — cannot have an explicit return type
 - Is **not inherited** by child classes
@@ -453,6 +462,7 @@ void A() { ... }  // This is a METHOD, not a constructor — no output when obje
 When you do **not** explicitly write any constructor, the Java compiler **automatically adds an empty no-argument constructor** during compilation. This is called the **default constructor**.
 
 > The default constructor is **not added** when:
+>
 > - You define a constructor with arguments
 > - You define both argument and no-argument constructors
 
@@ -511,6 +521,7 @@ public class A {
 `this()` calls **one constructor from another constructor** in the same class.
 
 **Rules:**
+
 - `this()` can **only be called from another constructor** (not from a method)
 - It must always be the **first statement** inside the constructor
 
@@ -614,6 +625,7 @@ public static void main(String[] args) {
 Packages are **folders** used to organize Java classes, making large projects easier to maintain.
 
 **Rules:**
+
 - Package names should be **all lowercase**
 - Cannot use Java **keywords** as package names (`new`, `static`, `public`, etc.)
 - Do not start with capital letters
@@ -671,12 +683,12 @@ public class MainClass {
 
 ## 11. OOP — The Four Pillars
 
-| Pillar | Description |
-|--------|-------------|
-| **Inheritance** | Reuse members of a parent class in a child class |
-| **Polymorphism** | A feature takes more than one form (overloading & overriding) |
-| **Encapsulation** | Wrap data and methods together; restrict direct access |
-| **Abstraction** | Hide implementation details; define *what*, not *how* |
+| Pillar            | Description                                                   |
+| ----------------- | ------------------------------------------------------------- |
+| **Inheritance**   | Reuse members of a parent class in a child class              |
+| **Polymorphism**  | A feature takes more than one form (overloading & overriding) |
+| **Encapsulation** | Wrap data and methods together; restrict direct access        |
+| **Abstraction**   | Hide implementation details; define _what_, not _how_         |
 
 ---
 
@@ -733,11 +745,11 @@ public class C extends A, B { } // Error
 
 ### Inheritance Keywords Summary
 
-| Relationship | Keyword |
-|-------------|---------|
-| Class to Class | `extends` |
-| Interface to Interface | `extends` |
-| Class to Interface | `implements` |
+| Relationship           | Keyword      |
+| ---------------------- | ------------ |
+| Class to Class         | `extends`    |
+| Interface to Interface | `extends`    |
+| Class to Interface     | `implements` |
 
 ---
 
@@ -747,12 +759,12 @@ Access specifiers define the **visibility** of variables, methods, constructors,
 
 ### On Variables and Methods
 
-| Specifier | Same Class | Same Package (subclass) | Same Package (non-subclass) | Different Package (subclass) | Different Package (non-subclass) |
-|-----------|-----------|------------------------|----------------------------|-----------------------------|---------------------------------|
-| `private` | Yes | No | No | No | No |
-| `default` | Yes | Yes | Yes | No | No |
-| `protected` | Yes | Yes | Yes | Yes | No |
-| `public` | Yes | Yes | Yes | Yes | Yes |
+| Specifier   | Same Class | Same Package (subclass) | Same Package (non-subclass) | Different Package (subclass) | Different Package (non-subclass) |
+| ----------- | ---------- | ----------------------- | --------------------------- | ---------------------------- | -------------------------------- |
+| `private`   | Yes        | No                      | No                          | No                           | No                               |
+| `default`   | Yes        | Yes                     | Yes                         | No                           | No                               |
+| `protected` | Yes        | Yes                     | Yes                         | Yes                          | No                               |
+| `public`    | Yes        | Yes                     | Yes                         | Yes                          | Yes                              |
 
 ```java
 // private: accessible only within same class
@@ -776,12 +788,12 @@ public void test() { }
 
 ### On Constructors
 
-| Constructor Access | Object Creation | Inheritance Allowed |
-|--------------------|-----------------|---------------------|
-| `private` | Same class only | Not allowed |
-| `default` | Same package only | Same package only |
-| `protected` | Same package only | Same + different package |
-| `public` | Everywhere | Same + different package |
+| Constructor Access | Object Creation   | Inheritance Allowed of That Class |
+| ------------------ | ----------------- | --------------------------------- |
+| `private`          | Same class only   | Not allowed                       |
+| `default`          | Same package only | Same package only                 |
+| `protected`        | Same package only | Same + different package          |
+| `public`           | Everywhere        | Same + different package          |
 
 > **Constructors are never inherited** — access specifier only affects where objects can be created and whether a class can be extended.
 
@@ -791,10 +803,10 @@ public void test() { }
 
 > A top-level class can only be `public` or `default`. It **cannot** be `private` or `protected`.
 
-| Class Access | Object Creation | Inheritance |
-|-------------|-----------------|-------------|
-| `default` | Same package | Same package only |
-| `public` | Everywhere | Same + different package |
+| Class Access | Object Creation | Inheritance              |
+| ------------ | --------------- | ------------------------ |
+| `default`    | Same package    | Same package only        |
+| `public`     | Everywhere      | Same + different package |
 
 ---
 
@@ -831,14 +843,14 @@ public class PlatinumAccount extends GoldAccount {
 
 **Rules for Overriding:**
 
-| Rule | Detail |
-|------|--------|
-| Method name | Must be **exactly the same** |
-| Return type | Must **match** |
-| Access specifier | Can be **increased** but not **reduced** |
-| Static methods | **Cannot be overridden** (they are not inherited) |
-| Private methods | **Cannot be overridden** (they are not inherited) |
-| `final` methods | **Cannot be overridden** |
+| Rule             | Detail                                            |
+| ---------------- | ------------------------------------------------- |
+| Method name      | Must be **exactly the same**                      |
+| Return type      | Must **match**                                    |
+| Access specifier | Can be **increased** but not **reduced**          |
+| Static methods   | **Cannot be overridden** (they are not inherited) |
+| Private methods  | **Cannot be overridden** (they are not inherited) |
+| `final` methods  | **Cannot be overridden**                          |
 
 ```java
 // Increasing access scope is allowed
@@ -882,12 +894,12 @@ public class EmailService {
 
 ## 14. The `final` Keyword
 
-| Applied To | Effect |
-|-----------|--------|
-| Variable | Value cannot be changed (constant) |
+| Applied To               | Effect                                                              |
+| ------------------------ | ------------------------------------------------------------------- |
+| Variable                 | Value cannot be changed (constant)                                  |
 | Static/Instance variable | Initialization is **mandatory** — blank final field error otherwise |
-| Method | Cannot be **overridden** |
-| Class | Cannot be **inherited** |
+| Method                   | Cannot be **overridden**                                            |
+| Class                    | Cannot be **inherited**                                             |
 
 ```java
 // Final variable — value cannot change
@@ -911,9 +923,10 @@ public class B extends A { } // Error: cannot inherit from final class
 
 ## 15. Interfaces
 
-An **interface** defines *what* needs to be done — not *how*. It is a **contract** that implementing classes must follow.
+An **interface** defines _what_ needs to be done — not _how_. It is a **contract** that implementing classes must follow.
 
 **Key Points:**
+
 - Can only contain **abstract (incomplete) methods** (Java 7 and earlier)
 - All variables are **implicitly `public static final`** (constants)
 - Cannot create an object of an interface
@@ -1118,6 +1131,7 @@ public interface A {
 An **abstract class** can have **both complete and incomplete methods**, sitting between a regular class and an interface.
 
 **Key Points:**
+
 - Use `abstract` keyword to declare the class and its incomplete non-static methods
 - Can have static, non-static, and final variables
 - **Cannot create an object** of an abstract class
@@ -1185,13 +1199,13 @@ public class C extends B {
 
 ### Interface vs Abstract Class
 
-| Feature | Interface | Abstract Class |
-|---------|-----------|----------------|
-| Multiple inheritance | Supported | Not supported |
-| Variables | Only `public static final` | Any type (static, non-static, final) |
-| Complete methods | Java 8+ via `default` | Always supported |
-| Object creation | Not allowed | Not allowed |
-| Constructor | Not allowed | Allowed |
+| Feature              | Interface                  | Abstract Class                       |
+| -------------------- | -------------------------- | ------------------------------------ |
+| Multiple inheritance | Supported                  | Not supported                        |
+| Variables            | Only `public static final` | Any type (static, non-static, final) |
+| Complete methods     | Java 8+ via `default`      | Always supported                     |
+| Object creation      | Not allowed                | Not allowed                          |
+| Constructor          | Not allowed                | Allowed                              |
 
 ---
 
@@ -1221,10 +1235,10 @@ System.out.println("Program continues..."); // This runs
 
 ### Types of Exceptions
 
-| Type | When Occurs | Example |
-|------|-------------|---------|
-| **Checked (Compile-time)** | During `.java` → `.class` compilation | `IOException`, `FileNotFoundException` |
-| **Unchecked (Runtime)** | While running `.class` file | `ArithmeticException`, `NullPointerException` |
+| Type                       | When Occurs                           | Example                                       |
+| -------------------------- | ------------------------------------- | --------------------------------------------- |
+| **Checked (Compile-time)** | During `.java` → `.class` compilation | `IOException`, `FileNotFoundException`        |
+| **Unchecked (Runtime)**    | While running `.class` file           | `ArithmeticException`, `NullPointerException` |
 
 ---
 
@@ -1317,10 +1331,10 @@ public static void main(String[] args) throws Exception {
 
 ### `final` vs `finally` vs `finalize()`
 
-| Keyword | Purpose |
-|---------|---------|
-| `final` | Makes variable constant; prevents method override; prevents class inheritance |
-| `finally` | Block that always executes after try-catch; used for cleanup |
+| Keyword      | Purpose                                                                               |
+| ------------ | ------------------------------------------------------------------------------------- |
+| `final`      | Makes variable constant; prevents method override; prevents class inheritance         |
+| `finally`    | Block that always executes after try-catch; used for cleanup                          |
 | `finalize()` | Method in `Object` class; called by the Garbage Collector before destroying an object |
 
 ---
@@ -1330,6 +1344,7 @@ public static void main(String[] args) throws Exception {
 **Encapsulation** wraps variables and methods into a single unit and **restricts direct access** to internal data.
 
 **How to implement:**
+
 1. Make variables `private` (data hiding)
 2. Provide `public` getter and setter methods
 
@@ -1357,6 +1372,7 @@ public class B {
 ```
 
 **Benefits:**
+
 - Protects data from unintended modification
 - You can add validation logic inside setters
 - Increases code maintainability and readability
@@ -1397,6 +1413,7 @@ public class C extends A {
 ```
 
 > **Why use upcasting?**
+>
 > - Reuse one reference variable for multiple child objects
 > - Enable polymorphism across multiple child classes
 > - Write flexible, generic code
@@ -1543,15 +1560,15 @@ System.out.println(y); // 10
 Wrapper classes wrap a primitive data type inside an object. They also provide useful utility methods for conversion.
 
 | Primitive | Wrapper Class |
-|-----------|--------------|
-| `byte` | `Byte` |
-| `short` | `Short` |
-| `int` | `Integer` |
-| `long` | `Long` |
-| `float` | `Float` |
-| `double` | `Double` |
-| `char` | `Character` |
-| `boolean` | `Boolean` |
+| --------- | ------------- |
+| `byte`    | `Byte`        |
+| `short`   | `Short`       |
+| `int`     | `Integer`     |
+| `long`    | `Long`        |
+| `float`   | `Float`       |
+| `double`  | `Double`      |
+| `char`    | `Character`   |
+| `boolean` | `Boolean`     |
 
 **String to Primitive conversion:**
 
@@ -1924,6 +1941,7 @@ fis.close();
 JDBC allows Java programs to **interact with relational databases** (MySQL, Oracle, PostgreSQL, etc.).
 
 **Setup:**
+
 - Install MySQL: https://dev.mysql.com/downloads/windows/installer/8.0.html
 - Create database and table in MySQL Workbench
 
@@ -2044,13 +2062,13 @@ A **thread** is a lightweight unit of execution. Java supports **multithreading*
 
 ## 31. Eclipse Shortcuts
 
-| Shortcut | Name | Description |
-|----------|------|-------------|
-| `Ctrl + Space` | Content Assist | Autocomplete. Type `syso` then `Ctrl+Space` → `System.out.println()` |
-| `Ctrl + 1` | Quick Fix | Suggests solutions for errors and warnings |
-| `Ctrl + O` | Quick Outline | Shows all methods and fields in the current class |
-| `F3` | Go to Declaration | Jumps to where a variable, method, or class is declared |
-| `Ctrl + .` | Next Problem | Jumps to the next error or warning in the file |
+| Shortcut       | Name              | Description                                                          |
+| -------------- | ----------------- | -------------------------------------------------------------------- |
+| `Ctrl + Space` | Content Assist    | Autocomplete. Type `syso` then `Ctrl+Space` → `System.out.println()` |
+| `Ctrl + 1`     | Quick Fix         | Suggests solutions for errors and warnings                           |
+| `Ctrl + O`     | Quick Outline     | Shows all methods and fields in the current class                    |
+| `F3`           | Go to Declaration | Jumps to where a variable, method, or class is declared              |
+| `Ctrl + .`     | Next Problem      | Jumps to the next error or warning in the file                       |
 
 ---
 
@@ -2058,34 +2076,34 @@ A **thread** is a lightweight unit of execution. Java supports **multithreading*
 
 ### Variable Types Summary
 
-| Variable Type | Where Declared | `static`? | Needs Object? | Default Value? |
-|---------------|----------------|-----------|---------------|----------------|
-| Local | Inside method | No | No | Must initialize manually |
-| Static | Inside class, outside method | Yes | No | Auto-assigned |
-| Instance (Non-static) | Inside class, outside method | No | Yes | Auto-assigned |
-| Reference | Anywhere | Optional | Depends | `null` (if static/instance) |
+| Variable Type         | Where Declared               | `static`? | Needs Object? | Default Value?              |
+| --------------------- | ---------------------------- | --------- | ------------- | --------------------------- |
+| Local                 | Inside method                | No        | No            | Must initialize manually    |
+| Static                | Inside class, outside method | Yes       | No            | Auto-assigned               |
+| Instance (Non-static) | Inside class, outside method | No        | Yes           | Auto-assigned               |
+| Reference             | Anywhere                     | Optional  | Depends       | `null` (if static/instance) |
 
 ---
 
 ### Access Specifier Quick Reference
 
-| Specifier | Same Class | Same Package | Different Package (subclass) | Different Package |
-|-----------|-----------|--------------|------------------------------|-------------------|
-| `private` | Yes | No | No | No |
-| `default` | Yes | Yes | No | No |
-| `protected` | Yes | Yes | Yes | No |
-| `public` | Yes | Yes | Yes | Yes |
+| Specifier   | Same Class | Same Package | Different Package (subclass) | Different Package |
+| ----------- | ---------- | ------------ | ---------------------------- | ----------------- |
+| `private`   | Yes        | No           | No                           | No                |
+| `default`   | Yes        | Yes          | No                           | No                |
+| `protected` | Yes        | Yes          | Yes                          | No                |
+| `public`    | Yes        | Yes          | Yes                          | Yes               |
 
 ---
 
 ### OOP Concepts at a Glance
 
-| Concept | Keyword/Feature | Key Idea |
-|---------|----------------|----------|
-| Inheritance | `extends` | Reuse parent class members |
-| Polymorphism | Override / Overload | One method, multiple behaviors |
-| Encapsulation | `private` + getters/setters | Hide and protect data |
-| Abstraction | `interface` / `abstract` | Define *what*, hide *how* |
+| Concept       | Keyword/Feature             | Key Idea                       |
+| ------------- | --------------------------- | ------------------------------ |
+| Inheritance   | `extends`                   | Reuse parent class members     |
+| Polymorphism  | Override / Overload         | One method, multiple behaviors |
+| Encapsulation | `private` + getters/setters | Hide and protect data          |
+| Abstraction   | `interface` / `abstract`    | Define _what_, hide _how_      |
 
 ---
 
@@ -2109,13 +2127,13 @@ Throwable
 
 ### File Handling Classes Summary
 
-| Class | Purpose | Key Method |
-|-------|---------|------------|
-| `File` | File/folder operations | `exists()`, `delete()`, `mkdir()`, `createNewFile()`, `list()` |
-| `FileReader` | Read text files | `read()`, `read(char[])` |
-| `FileWriter` | Write to text files | `write()`, `close()` |
-| `BufferedReader` | Faster reading + line-by-line | `readLine()` |
-| `BufferedWriter` | Faster writing | `write()`, `newLine()` |
+| Class            | Purpose                       | Key Method                                                     |
+| ---------------- | ----------------------------- | -------------------------------------------------------------- |
+| `File`           | File/folder operations        | `exists()`, `delete()`, `mkdir()`, `createNewFile()`, `list()` |
+| `FileReader`     | Read text files               | `read()`, `read(char[])`                                       |
+| `FileWriter`     | Write to text files           | `write()`, `close()`                                           |
+| `BufferedReader` | Faster reading + line-by-line | `readLine()`                                                   |
+| `BufferedWriter` | Faster writing                | `write()`, `newLine()`                                         |
 
 ---
 
