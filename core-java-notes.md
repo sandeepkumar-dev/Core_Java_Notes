@@ -1539,6 +1539,18 @@ System.out.println(y); // 10
 ```
 
 ---
+### Swapping Two Variables without using Third Variables
+
+```java
+int x = 10, y = 20;
+x    = x + y; //x=10+20=30
+y    = x - y; //y=30-20=10
+x    = x - y; //x=30-10=20
+System.out.println(x); // 20
+System.out.println(y); // 10
+```
+
+---
 
 ## 21. Wrapper Classes
 
