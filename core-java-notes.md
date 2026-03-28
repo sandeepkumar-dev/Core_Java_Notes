@@ -733,7 +733,7 @@ public class C extends B {
 
 > Java does **not support multiple inheritance** with classes due to the **Diamond Problem** — ambiguity about which parent's method to use when two parents share the same method name.
 
- Diamond Problem:Suppose we inherit a method from A->B->D  and Same method is inherited from A->C->D, then confusion from which parent class method is inherited to child class D. This is called as DIAMOND PROBLEM. Hence in java classes does not support multiple inheritance
+Diamond Problem:Suppose we inherit a method from A->B->D and Same method is inherited from A->C->D, then confusion from which parent class method is inherited to child class D. This is called as DIAMOND PROBLEM. Hence in java classes does not support multiple inheritance
 
 ```java
 public class C extends A, B { } // Error
@@ -845,14 +845,14 @@ public class PlatinumAccount extends GoldAccount {
 
 **Rules for Overriding:**
 
-| Rule             | Detail                                            |
-| ---------------- | ------------------------------------------------- |
-| Method name      | Must be **exactly the same**                      |
-| Return type      | Must **match**                                    |
-| Access specifier | Can be **increased** but not **reduced**          |
-| Static methods   | **Cannot be overridden** (they are not inherited) |
-| Private methods  | **Cannot be overridden** (they are not inherited) |
-| `final` methods  | **Cannot be overridden**                          |
+| Rule             | Detail                                                                      |
+| ---------------- | --------------------------------------------------------------------------- |
+| Method name      | Must be **exactly the same**                                                |
+| Return type      | Must **match**                                                              |
+| Access specifier | Can be **increased** but not **reduced**                                    |
+| Static methods   | **Cannot be overridden** (but they are inherited and follow method hiding.) |
+| Private methods  | **Private methods are NOT inherited** (so they cannot be overridden.)       |
+| `final` methods  | **Cannot be overridden**                                                    |
 
 ```java
 // Increasing access scope is allowed
@@ -1556,6 +1556,7 @@ System.out.println(y); // 10
 ```
 
 ---
+
 ### Swapping Two Variables without using Third Variables
 
 ```java
