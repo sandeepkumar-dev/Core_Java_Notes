@@ -1016,7 +1016,9 @@ class C extends B implements A { ... }
 ### Note:
 
 Class to Class Inheritance --> extends
+
 interface to interface Inheritance --> extends
+
 interface to class Inheritance --> implements
 
 ---
