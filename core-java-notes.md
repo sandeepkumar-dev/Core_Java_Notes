@@ -1013,6 +1013,57 @@ class C extends B implements A { ... }
 
 ---
 
+### Note:
+
+-> Class to Class Inheritance --> extends
+-> interface to interface Inheritance --> extends
+-> interface to class Inheritance --> implements
+
+---
+
+---
+
+On class can we perform extends implements together - yes
+But ensure extends is used first and then implements
+
+```java
+package p1;
+public interface A {
+	public void test2();
+}
+
+```
+
+```java
+package p1;
+public class B {
+	public void test1() {
+		System.out.println("From test1");
+	}
+}
+
+```
+
+```java
+package p1;
+public class C extends B  implements  A {
+	@Override
+	public void test2() {
+		System.out.println("From test2");
+	}
+	public static void main(String[] args) {
+		C c1 = new C();
+		c1.test1();
+		c1.test2();
+	}
+}
+
+```
+
+---
+
+---
+
 ### Marker Interface
 
 An **empty interface** (no methods or variables) is called a **Marker Interface**.
